@@ -1,0 +1,94 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navigation-bar">
+      <div class="container menu">
+        <div class="navbar-content">
+          <div class="logo">
+            <a href="{% url 'blogs' %}" class="nav-logo">Sanchay.</a>
+          </div>
+          <div class="navbar-links">
+            <div class="menubar">
+              <a href="{% url 'about' %}" class="nav-links">About</a>
+              <a href="{% url 'my_blogs' %}" class="nav-links">My blogs</a>
+              <a href="{% url 'blog_create' %}" class="nav-links underline">Create blog</a>
+
+              {% comment %} <a href="{% url 'contact' %}" class="nav-links">Contact</a> {% endcomment %}
+              <a href="{% url 'login' %}" class="nav-links underline"><i class="far fa-user-circle"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <div class="container">
+
+
+      <div class="container">
+        {% block passwordreset %}
+        <!-- {% if user.is_authenticated %} -->
+        <!-- {% else %} -->
+        <!-- {% endif %} -->
+        <div class="flex">
+          <h2 class="hero-title">Hi {{ user.username }}!</h2>
+          <div class="flex abc">
+            <!-- <p><a href="{% url 'logout' %}" class="nav-links color-red">Log out</a></p>
+            <p><a href="{% url 'password_change' %}" class="nav-links color-red">Change Password</a></p> -->
+          </div>
+        </div>
+        {% block content %}
+        {% endblock content %}
+
+        
+
+        <!-- <p class="blog-card-subtitle">You are not logged in.</p> -->
+        <div class="flex mb-4">
+          
+          <div class="flex abc">
+            <!-- <p><a href="{% url 'signup' %}" class="nav-links underline">Sign up</a></p>
+            <p><a href="{% url 'password_reset' %}" class="nav-links underline">Reset Password</a></p> -->
+          </div>
+        </div>
+      </div>
+      
+      {% block signup %}
+      {% endblock signup %}
+      {% block login %}
+      {% endblock login %}
+      
+      {% endblock passwordreset %}
+
+    </div>
+
+    </div>
+  </main>
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <h6 class="footer-title">Sanchay Dev Upadhyay
+        </h6>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="fab fa-facebook-square"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

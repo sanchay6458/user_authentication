@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- {% if user.is_authenticated %} -->
+
+
+<a href="{% url 'blogs' %}" class="nav-links underline mb-4">Back to blogs</a>
+<h1 class="hero-title">
+  {{ blog.title }}
+</h1>
+<div class="blogs">
+
+  <div class="blog-card">
+    <div class="blog-card-img">
+      <img src="{{blog.header_image.url}}" alt="" class="img-responsive">
+    </div>
+    <div class="blog-card-text">
+      <div>
+        <h4 class="blog-card-title">{{ blog.subtitle }}</h4>
+        <p class="blog-card-subtitle">
+          posted by <em>{{ blog.author }}</em>
+        </p>
+        <p class="blog-card-para">
+          {{ blog.body }}
+        </p>
+      </div>
+      <a href="{% url 'blog_edit' blog.pk %}" class="nav-links underline">Edit this blog</a>
+      <a href="{% url 'blog_delete' blog.pk %}" class="nav-links underline color-red">Delete this blog</a>
+      
+    </div>
+    <!-- {% else %} -->
+    <h1>You are not loging | <a href="{% url 'login' %}" class="nav-links underline">Login</a></h1>
+
+  </div>
+
+</div>
+<!-- {% endif %} -->
+
+{% endblock content %}

@@ -1,0 +1,15 @@
+{% extends 'base.html' %} 
+{% block content %}
+<!-- {% if user.is_authenticated %} -->
+<h1>Create a new blog</h1>
+<div>
+  <form action="" method="POST" class="form" enctype="multipart/form-data" >
+    {% csrf_token %} 
+    {{ form }}
+    <button type="submit" value="Save" class="btn"/>Post Now</button>
+  </form>
+  <!-- {% else %} -->
+  <h1>You are not login | <a href="{% url 'login' %}" class="nav-links underline">Login</a></h1>
+</div>
+<!-- {% endif %} -->
+{% endblock content %}

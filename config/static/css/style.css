@@ -1,0 +1,81 @@
+*
+{
+    margin: 0;
+    padding: 0;
+
+}
+.navbar-content .logo a
+{
+    background-color: pink;
+    color: brown;
+}
+.menubar a
+{
+    font-size: 2.5rem;
+    margin-left: 20px;
+    
+}
+.menubar a:hover
+{
+        background-color: red;
+        color: white;
+        border: 5px solid black;
+}
+.menu
+{
+    background-color: pink;
+}
+.footer h6
+{
+    color: rgb(107, 42, 52);
+    margin-top: 10px;
+}
+.social-links a
+{
+    color: blue;
+}
+.hero-text h1
+{
+    color: green;
+    /* animation-name: header;
+    animation-iteration-count: infinite;
+    animation-duration: 10s; */
+
+}
+/* @keyframes header
+{
+    0%{display: none;}
+    100%{display: block;}
+} */
+.abc a
+{
+    margin-left: 20px;
+    padding-left: 20px;
+}
+.abc a:hover 
+{
+    background-color: black;
+    color: white;
+    border: 2px solid red;
+}
+footer
+{
+    background-color: rgb(146, 141, 141);
+    padding: 0 50px;
+}
+.social-links a
+{
+    font-size: 4rem;
+}
+.social-links a:hover
+{
+    background-color: rgb(199, 247, 231);
+}
+.profile h3
+{
+    padding-bottom: 30px;
+}
+.sss
+{
+    margin: 0 50px;
+}

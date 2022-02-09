@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="hero-content">
+    <div class="hero-text">
+      <h1 class="hero-title">
+        <!-- {{ title }} -->Hello Friends, I’m Sanchay , FullStack Django Developer and Programming Instructor.
+      </h1>
+      <p class="hero-para">I work as a Turring fullstack Django developer and as a remote programming instructor</p>
+      <p class="hero-para">
+        As a Django devleoper, I make websites and web applications using Django, html,css, javascript, bootstrap, and react.
+        As a programming instructor, I teach django, html,css, javascript, bootstrap, and react to students all over the Nepal.
+      </p>
+    </div> 
+    <div class="hero-img">
+        {% load static %}
+        <img src="{% static 'img/pic.jpg' %}" alt="" class="img-responsive">
+    </div>
+
+  </div>
+  <div class="skills">
+    <h5>Skills</h5>
+    <div>
+      <p>Javascript, Python, Django, HTML,CSS, PHP, React, VB.Net</p>
+      <p>SQLite, SQL Server, Git, Github</p>
+    </div>
+  </div>
+  <div class="softwares">
+    <h5>Tools</h5>
+    <div>
+      <p>Visual Studio Code, Boostrapp</p>
+      </p>
+     
+    </div>
+  </div>
+
+  <hr class="line">
+  <div class="contact">
+    <h2>Get in touch with me &rarr; </h2>
+    <div class="contact-links">
+      <a href="mailto:makifkarasu@gmail.com">sanchayup@gmail.com</a>
+      <a href="#" target="_blank">View Resume</a>
+  </div>
+</div>
+{% endblock content %}

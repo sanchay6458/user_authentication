@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block login %}
+<!-- {% if user.is_authenticated %} -->
+<div class="profile">
+
+    <div class="flex">
+        <h1>First Name : {{ user.first_name }}</h1>
+        {% load static %}
+        <img src="{{user.images.url}}" alt="">
+
+    </div>
+
+    <h1>Last Name : {{ user.last_name }}</h1>
+    <h3>Ege : {{ user.age }}</h3>
+    <h3>Address : {{ user.Address }}</h3>
+    <h3>Email : {{ user.email }}</h3>
+
+</div>
+<div class="flex">
+<p><a href="{% url 'logout' %}" class="nav-links color-red">Log out</a></p>
+<p><a href="{% url 'password_change' %}" class="nav-links color-red">Change Password</a></p>
+</div>
+<!-- {% else %} -->
+<div>
+    <h2 class="hero-title">Log In</h2>
+
+</div>
+<form method="post" class="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn">Log In</button>
+    <p><a href="{% url 'signup' %}" class="nav-links underline">Sign up</a></p>
+    <p><a href="{% url 'password_reset' %}" class="nav-links underline">Reset Password</a></p>
+</form>
+<!-- {% endif %} -->
+{% endblock login %}
